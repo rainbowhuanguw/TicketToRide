@@ -1,0 +1,99 @@
+Vancouver|Seattle|grey|1
+Vancouver|Seattle|grey|1
+Vancouver|Calgary|grey|3
+Seattle|Portland|grey|1
+Seattle|Portland|grey|1
+Seattle|Calgary|grey|4
+Seattle|Helena|yellow|6
+Portland|San Francisco|green|5
+Portland|San Francisco|purple|5
+Portland|Salt Lake City|blue|6
+San Francisco|Los Angeles|yellow|3
+San Francisco|Los Angeles|purple|3
+San Francisco|Salt Lake City|orange|5
+San Francisco|Salt Lake City|white|5
+Los Angeles|Las Vegas|grey|2
+Los Angeles|Phoenix|grey|3
+Los Angeles|El Paso|black|6
+Salt Lake City|Helena|purple|3
+Salt Lake City|Denver|red|3
+Salt Lake City|Denver|yellow|3
+Salt Lake City|Las Vegas|orange|3
+Phoenix|El Paso|grey|3
+Phoenix|Santa Fe|grey|2
+Phoenix|Denver|white|5
+Calgary|Winnipeg|white|6
+Calgary|Helena|grey|4
+Helena|Winnipeg|blue|4
+Helena|Duluth|orange|6
+Helena|Omaha|red|5
+Helena|Denver|green|4
+Denver|Omaha|purple|4
+Denver|Kansas City|black|4
+Denver|Kansas City|orange|4
+Denver|Oklahoma City|red|4
+Denver|Santa Fe|grey|2
+Santa Fe|Oklahoma City|blue|3
+Santa Fe|El Paso|grey|2
+El Paso|Oklahoma City|yellow|5
+El Paso|Dallas|red|4
+El Paso|Houston|green|6
+Winnipeg|Sault St. Marie|grey|6
+Winnipeg|Duluth|grey|6
+Duluth|Sault St. Marie|grey|3
+Duluth|Toronto|purple|6
+Duluth|Chicago|red|3
+Duluth|Omaha|grey|2
+Duluth|Omaha|grey|2
+Omaha|Kansas City|grey|1
+Omaha|Kansas City|grey|1
+Omaha|Chicago|blue|4
+Kansas City|Saint Louis|purple|2
+Kansas City|Saint Louis|blue|2
+Kansas City|Oklahoma City|grey|2
+Kansas City|Oklahoma City|grey|2
+Oklahoma City|Little Rock|grey|2
+Oklahoma City|Dallas|grey|2
+Oklahoma City|Dallas|grey|2
+Dallas|Little Rock|grey|2
+Dallas|Houston|grey|2
+Dallas|Houston|grey|2
+Houston|New Orleans|grey|2
+Sault St. Marie|Montreal|black|5
+Sault St. Marie|Toronto|grey|2
+Chicago|Toronto|white|4
+Chicago|Pittsburgh|orange|3
+Chicago|Pittsburgh|black|3
+Chicago|Saint Louis|green|2
+Chicago|Saint Louis|white|2
+Saint Louis|Pittsburgh|green|5
+Saint Louis|Nashville|white|grey|2
+Little Rock|Nashville|white|3
+Little Rock|New Orleans|green|3
+New Orleans|Atlanta|yellow|4
+New Orleans|Atlanta|orange|4
+New Orleans|Miami|red|6
+Montreal|Toronto|grey|3
+Montreal|Boston|grey|2
+Montreal|Boston|grey|2
+Montreal|New York|blue|3
+Toronto|Pittsburgh|grey|2
+Pittsburgh|Nashville|yellow|4
+Pittsburgh|New York|white|2
+Pittsburgh|New York|green|2
+Pittsburgh|Washington|grey|2
+Pittsburgh|Raleigh|grey|2
+Nashville|Raleigh|black|3
+Nashville|Atlanta|grey|1
+Atlanta|Raleigh|grey|2
+Atlanta|Raleigh|grey|2
+Atlanta|Charleston|grey|2
+Atlanta|Miami|blue|5
+Boston|New York|yellow|2
+Boston|New York|red|2
+New York|Washington|orange|2
+New York|Washington|black|2
+Washington|Raleigh|grey|2
+Washington|Raleigh|grey|2
+Raleigh|Charleston|grey|2
+Charleston|Miami|purple|4
