@@ -1,6 +1,5 @@
 package carddeck;
 
-import card.TaskCard;
 
 /**
  * This class deck manager is responsible for filling in all the deck for the first time, and coordinate filling
@@ -26,8 +25,10 @@ public class DeckManager {
         return manager;
     }
 
+    /**
+     * be responsible for inter-deck activities, such as filling decks
+     */
     public void manageDecks() {
-
         // fill face-down deck
         if (faceDownDeck.isEmpty() && !discardsDeck.isEmpty()) {
             faceDownDeck.fillDeck();
@@ -37,7 +38,6 @@ public class DeckManager {
         if (faceUpDeck.isEmpty() && !faceDownDeck.isEmpty()) {
             faceUpDeck.fillDeck();
         }
-
         while (faceUpDeck.isFull() && faceUpDeck.has3OrMoreLocoCard()) {
             faceUpDeck.discardAll();
             if (!faceDownDeck.isEmpty()) {
@@ -46,14 +46,8 @@ public class DeckManager {
         }
 
         System.out.print("up"  + faceUpDeck.getSize());
-        System.out.println("down"  + faceDownDeck.getSize());
+        System.out.println(" down"  + faceDownDeck.getSize());
     }
-
-    public static void main(String[] args) {
-        DeckManager manager = DeckManager.getObjectInstance();
-        manager.manageDecks();
-    }
-
 
 
 
