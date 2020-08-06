@@ -19,7 +19,7 @@ class TrainCardTest {
         TrainCard trainCard = new TrainCard("red");
         assertEquals("red", trainCard.getColor());
     }
-    
+
     @Test
     void setOwnerId_returnsCheese() {
         TrainCard trainCard = new TrainCard("orange");

@@ -55,8 +55,10 @@ public class FaceUpDeck implements ICardDeck, IDiscardable, IDrawable, IFillable
      * @return return a color string of the card at the given index
      */
     public static String getColorByIndex(int index) {
-        assert faceUpDeckList.get(index) != null;
-        return faceUpDeckList.get(index).getColor();
+        if (faceUpDeckList.get(index) != null) {
+            return faceUpDeckList.get(index).getColor();
+        }
+        return null;
     }
 
     /**
