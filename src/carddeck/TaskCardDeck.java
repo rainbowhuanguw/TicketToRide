@@ -121,13 +121,5 @@ public class TaskCardDeck implements ICardDeck, IShuffleable, IDiscardable {
         }
     }
 
-    public void displayTaskCards(List<TaskCard> taskCards) {
-        for (int i = 0; i< taskCards.size(); i++) {
-            System.out.println("index: " + i);
-            TaskCard card = taskCards.get(i);
-            System.out.println("Task: " + card.getCity1() + " - " + card.getCity2() + ", points: " + card.getPoints());
-        }
-    }
-
 
 }

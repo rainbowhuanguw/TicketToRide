@@ -1,4 +1,4 @@
-package route;
+package route.longestpaths;
 
 public class LongestPathFinder {
 }

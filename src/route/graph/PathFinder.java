@@ -1,6 +1,7 @@
-package route;
+package route.graph;
 
 import city.City;
+import route.Route;
 
 import java.util.*;
 

@@ -1,21 +1,29 @@
 package player;
 
+import card.TaskCard;
 import card.TrainCard;
 import carddeck.FaceDownDeck;
 import carddeck.FaceUpDeck;
+import carddeck.TaskCardDeck;
 
 import java.util.*;
 
+/**
+ * This class mimics the behaviors of a relatively stupid computer player,
+ * most of its behaviors are conducted randomly, almost no intelligence is involved here
+ */
 public class ComputerPlayer extends Player {
 
     private final int MAX_DRAW = 2;
     private final int MAX_FACE_UP_NUM = 5;
-
+    private final int TRAIN_CARD_NUM_THRESHOLD = 10;  // set threshold
+                                                      // draw train cards if owned cards are fewer than this
 
     private int intelligenceLevel;
     private Random rand;
     private long seed = 24; // randomly choose a seed
     private int counter;
+
 
     /**
      * constructor
@@ -69,16 +77,42 @@ public class ComputerPlayer extends Player {
     /**
      * decision making
      */
-    public void play() { computerDrawTrainCard(); }
+    public void play() {
+        // fewer than 10 cards, decks are not empty, draw cards
+        if (super.getNumOfTrainCard() < TRAIN_CARD_NUM_THRESHOLD &&
+                FaceUpDeck.getObjectInstance().getSize() + FaceDownDeck.getObjectInstance().getSize() >= 2) {
+            computerDrawTrainCard();
+
+            // fewer than 10 cards, decks are empty, claim routes
+        } else if (super.getNumOfTrainCard() < TRAIN_CARD_NUM_THRESHOLD &&
+                FaceUpDeck.getObjectInstance().getSize() + FaceDownDeck.getObjectInstance().getSize() < 2) {
+            computerClaimRoute();
+            // TODO: decide when to draw task cards, this should be the least frequent option
+        }
+    }
 
     /**
-     * draws 1 - 3 cards each time randomly
+     * choose what routes to claim
      */
-    private void computerDrawTaskCard() {
+    private void computerClaimRoute() {
 
     }
 
+    /**
+     * draws 1 random task card each time
+     */
+    private void computerDrawTaskCard() {
+        if (!TaskCardDeck.getObjectInstance().isEmpty()) {
+            List<TaskCard> taskCards = super.drawTaskCards();
+            int taskIndex = rand.nextInt(taskCards.size());
+            super.chooseTaskCards(taskCards, Set.of(taskIndex));
+        }
+    }
 
+    /**
+     * randomly generate drawing decisions, i.e. what cards to draw if drawing from face-up
+     * @return a train card being drawn
+     */
     private TrainCard computerDrawFaceUp() {
         TrainCard currCard = null;
 
@@ -168,16 +202,5 @@ public class ComputerPlayer extends Player {
             System.out.println("No more cards in the deck, cannot draw.");
         }
     }
-
-    /**
-     * play randomly
-     */
-    private void level1Play() {
-    }
-
-    private void level2Play() {}
-
-    private void level3Play() {}
-
 
 }

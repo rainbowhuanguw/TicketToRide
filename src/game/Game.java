@@ -6,11 +6,10 @@ import carddeck.*;
 import city.City;
 import city.CityNames;
 import color.RouteColors;
-import color.TrainCardColors;
 import player.ComputerPlayer;
 import player.Player;
 import player.PlayersCreator;
-import route.Graph;
+import route.graph.Graph;
 import route.Route;
 import route.RouteFileReader;
 import route.RouteFinder;
@@ -219,7 +218,7 @@ public class Game {
         System.out.print("Input a number from 0(inclusive) to " + faceUpDeck.getSize()
                 + "(exclusive): " );
         // not enough face-up cards to draw
-        if (faceUpDeck.getSize() < 2) {
+        if (faceUpDeck.isEmpty()) {
             System.out.println("Not enough cards in the face-up deck, try other options.");
         }
 

@@ -7,7 +7,7 @@ import carddeck.FaceUpDeck;
 import carddeck.TaskCardDeck;
 import city.City;
 import game.Game;
-import route.PathFinder;
+import route.graph.PathFinder;
 import route.Route;
 
 import java.util.*;
@@ -551,6 +551,11 @@ public class Player {
 
 
     /*----------------------------------display functions for game module--------------------------------------------*/
+
+    /**
+     * display all three task cards dealt from the task deck before deciding what cards to choose
+     * @param taskCards  the three task cards dealt to a player
+     */
     public void displayTaskCards(List<TaskCard> taskCards) {
         if (taskCards == null || taskCards.isEmpty()) {
             System.out.println("No available task cards.");
@@ -566,6 +571,7 @@ public class Player {
 
     /**
      * print out / display the train card combinations
+     * @param list  the combination list generated in enumerateCombinations()
      */
     public void displayCardCombinations(List<Map<String, Integer>> list) {
         if (list == null || list.isEmpty()) {
@@ -590,7 +596,7 @@ public class Player {
     }
 
     /**
-     *
+     * print out/ display all the train cards the player owns before drawing cards to better inform decisions
      */
     public void displayOwnedTrainCards() {
         if (ownedTrainCards.isEmpty()) {
